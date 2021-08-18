@@ -1,0 +1,348 @@
+<!-- CSS -->
+<style>
+  .questionContainer {
+    max-width: 460px;
+  }
+</style>
+<!-- CSS -->
+
+<!-- HTML -->
+
+<!-- Expand/Collapse All & Add Question buttons -->
+<div class="d-flex justify-content-between">
+  <div>
+    <button id="js-openAll" class="btn">Expand All</button>
+    <button id="js-closeAll" class="btn">Collapse All</button>
+  </div>
+  <button class="btn btn-primary">Add Question</button>
+</div>
+<!-- * -->
+
+<!-- Accordion with example questions and answers -->
+<div class="wrapper mt-4 rounded-5">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Questions</th>
+          <th scope="col" class="text-center">Type</th>
+          <th scope="col" class="text-center">Questions Grouping</th>
+          <th scope="col" class="text-center">Assign Question to Question grouping</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Question 1 -->
+        <tr>
+          <td>3</td>
+          <td>
+            <div class="d-flex align-items-center justify-content-between questionContainer py-10" id="questionOne">
+              <span id="questionOneHeading" class="questionText mr-2 text-truncate">How would you describe your typical attitude when making important financial decisions?</span>
+              <button class="btn btn-open collapsed" data-toggle="collapse" data-target="#questionOneAnswers" aria-expanded="true" aria-controls="questionOneAnswers" aria-label="View answers">
+                <span class="d-none d-lg-block">Answers</span>
+                <span class="material-icons" aria-hidden="true">expand_more</span>
+              </button>
+            </div>
+          </td>
+          <td>Single Choice</td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group">
+              <button class="btn" aria-label="Add answer" title="Add answer"><span class="material-icons" aria-hidden="true">add</span></button>
+              <button class="btn" aria-label="Edit question" title="Edit question"><span class="material-icons" aria-hidden="true">edit</span></button>
+              <button class="btn" aria-label="Delete question" title="Delete question"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Question 1 - Answers -->
+        <tr>
+          <td colspan="6" class="border-0 p-0">
+            <div id="questionOneAnswers" class="collapse border-top px-3 pt-3 pb-2 bg-light" aria-labelledby="questionOneHeading" data-parent="#questionOne">
+              <div class="row align-items-center border-bottom pb-3 font-weight-bold">
+                <div class="col-1">ID</div>
+                <div class="col-3">Answers</div>
+                <div class="col-2 text-center">Weighting</div>
+                <div class="col-2 text-center">Inconsistent Answers</div>
+                <div class="col-2 text-center">Inconsistent with</div>
+                <div class="col-2 text-center">Actions</div>
+              </div>
+              <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">1-a</div>
+                <div class="col-3">Answer 1</div>
+                <div class="col-2 text-center">5</div>
+                <div class="col-2 text-center">Q4-A 1-c, Q5-A 2-b</div>
+                <div class="col-2 text-center">
+                  <button class="btn">Find answer</button>
+                </div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">2-b</div>
+                <div class="col-3">Answer 2</div>
+                <div class="col-2 text-center">3</div>
+                <div class="col-2 text-center"></div>
+                <div class="col-2 text-center"><button class="btn" hidden>Find answer</button></div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Last item has no border-bottom -->
+              <div class="row align-items-center pt-2">
+                <div class="col-1">3</div>
+                <div class="col-3">Answer 3</div>
+                <div class="col-2 text-center">1</div>
+                <div class="col-2 text-center"></div>
+                <div class="col-2 text-center"><button class="btn" hidden>Find answer</button></div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Question 2 -->
+        <tr>
+          <td>4 Ac</td>
+          <td>
+            <div class="d-flex align-items-center justify-content-between questionContainer py-10" id="questionTwo">
+              <span id="questionTwoHeading" class="questionText mr-2 text-truncate">If you had money to invest, how much would you be willing to place in an investment with possible high returns but a similar chance of losing some of your money?</span>
+              <button class="btn btn-open collapsed" data-toggle="collapse" data-target="#questionTwoAnswers" aria-expanded="true" aria-controls="questionTwoAnswers" aria-label="View answers">
+                <span class="d-none d-lg-block">Answers</span>
+                <span class="material-icons" aria-hidden="true">expand_more</span>
+              </button>
+            </div>
+          </td>
+          <td>Single Choice</td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group">
+              <button class="btn" aria-label="Add answer" title="Add answer"><span class="material-icons" aria-hidden="true">add</span></button>
+              <button class="btn" aria-label="Edit question" title="Edit question"><span class="material-icons" aria-hidden="true">edit</span></button>
+              <button class="btn" aria-label="Delete question" title="Delete question"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Question 2 - Answers -->
+        <tr>
+          <td colspan="6" class="border-0 p-0">
+            <div id="questionTwoAnswers" class="collapse border-top px-3 pt-3 pb-2 bg-light" aria-labelledby="questionTwoHeading" data-parent="#questionOne">
+              <div class="row align-items-center border-bottom pb-3 font-weight-bold">
+                <div class="col-1">ID</div>
+                <div class="col-3">Answers</div>
+                <div class="col-2 text-center">Weighting</div>
+                <div class="col-2 text-center">Inconsistent Answers</div>
+                <div class="col-2 text-center">Inconsistent with</div>
+                <div class="col-2 text-center">Actions</div>
+              </div>
+              <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">1-a</div>
+                <div class="col-3">Answer 1</div>
+                <div class="col-2 text-center">5</div>
+                <div class="col-2 text-center">Q4-A 1-c, Q5-A 2-b</div>
+                <div class="col-2 text-center">
+                  <button class="btn">Find answer</button>
+                </div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">2-b</div>
+                <div class="col-3">Answer 2</div>
+                <div class="col-2 text-center">3</div>
+                <div class="col-2 text-center"></div>
+                <div class="col-2 text-center"><button class="btn" hidden>Find answer</button></div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Last item has no border-bottom -->
+              <div class="row align-items-center pt-2">
+                <div class="col-1">3</div>
+                <div class="col-3">Answer 3</div>
+                <div class="col-2 text-center">1</div>
+                <div class="col-2 text-center"></div>
+                <div class="col-2 text-center"><button class="btn" hidden>Find answer</button></div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Question 3 -->
+        <tr>
+          <td>5</td>
+          <td>
+            <div class="d-flex align-items-center justify-content-between questionContainer py-10" id="questionThree">
+              <span id="questionThreeHeading" class="questionText mr-2 text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat amet soluta nemo dolor impedit maxime, perspiciatis?</span>
+              <button class="btn btn-open collapsed" data-toggle="collapse" data-target="#questionThreeAnswers" aria-expanded="true" aria-controls="questionThreeAnswers" aria-label="View answers">
+                <span class="d-none d-lg-block">Answers</span>
+                <span class="material-icons" aria-hidden="true">expand_more</span>
+              </button>
+            </div>
+          </td>
+          <td>Single Choice</td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="btn-group">
+              <button class="btn" aria-label="Add answer" title="Add answer"><span class="material-icons" aria-hidden="true">add</span></button>
+              <button class="btn" aria-label="Edit question" title="Edit question"><span class="material-icons" aria-hidden="true">edit</span></button>
+              <button class="btn" aria-label="Delete question" title="Delete question"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Question 3 - Answers -->
+        <tr>
+          <td colspan="6" class="border-0 p-0">
+            <div id="questionThreeAnswers" class="collapse border-top px-3 pt-3 pb-2 bg-light" aria-labelledby="questionThreeHeading" data-parent="#questionOne">
+              <div class="row align-items-center border-bottom pb-3 font-weight-bold">
+                <div class="col-1">ID</div>
+                <div class="col-3">Answers</div>
+                <div class="col-2 text-center">Weighting</div>
+                <div class="col-2 text-center">Inconsistent Answers</div>
+                <div class="col-2 text-center">Inconsistent with</div>
+                <div class="col-2 text-center">Actions</div>
+              </div>
+              <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">1-a</div>
+                <div class="col-3">Answer 1</div>
+                <div class="col-2 text-center">5</div>
+                <div class="col-2 text-center">Q4-A 1-c, Q5-A 2-b</div>
+                <div class="col-2 text-center">
+                  <button class="btn">Find answer</button>
+                </div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center border-bottom py-2">
+                <div class="col-1">2-b</div>
+                <div class="col-3">Answer 2</div>
+                <div class="col-2 text-center">3</div>
+                <div class="col-2 text-center"></div>
+                <div class="col-2 text-center"><button class="btn" hidden>Find answer</button></div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Last item has no border-bottom -->
+              <div class="row align-items-center pt-2">
+                <div class="col-1">3</div>
+                <div class="col-3">Answer 3</div>
+                <div class="col-2 text-center">1</div>
+                <div class="col-2 text-center"></div>
+                <div class="col-2 text-center"><button class="btn" hidden>Find answer</button></div>
+                <div class="col-2 text-center">
+                  <div class="btn-group">
+                    <button class="btn" aria-label="Edit answer" title="Edit answer"><span class="material-icons" aria-hidden="true">edit</span></button>
+                    <button class="btn" aria-label="Delete answer" title="Delete answer"><span class="material-icons" aria-hidden="true">delete_forever</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- * -->
+
+<!-- Default/empty Accordion -->
+<div class="information bg-white border-primary d-flex justify-content-between align-items-center border rounded-5 gap-10 p-15">
+  <div class="d-flex align-items-center gap-10">
+    <span class="material-icons text-primary line-height-11">info</span>
+    <span class="w-100 align-self-center line-height-11">Please add at least 1 Single Choice Question with 2 answers to create a template.</span>
+  </div>
+  <button class="btn btn-primary">Add Question</button>
+</div>
+
+<div class="wrapper mt-4 rounded-5">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Questions</th>
+          <th scope="col" class="text-center">Type</th>
+          <th scope="col" class="text-center">Questions Grouping</th>
+          <th scope="col" class="text-center">Assign Question to Question grouping</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="6">
+            <div class="text-center pb-10 pt-20">
+              There is no data to display
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- * -->
+
+<!-- jQuery -->
+<script>
+  // Code for the Expand / Collapse all buttons
+  $('#js-openAll').on('click', function () {
+    $('.collapse').collapse('show')
+  })
+  $('#js-closeAll').on('click', function () {
+    $('.collapse').collapse('hide')
+  })
+
+  // Code for Answers expand button
+  // This code relies on the code order I have used
+  // .questionContainer > .questionText
+  $('.btn-open').on('click', function (event) {
+    if($(event.target).closest('.questionContainer').find('.questionText').hasClass('text-truncate')) {
+      $(event.target).closest('.questionContainer').find('.questionText').removeClass('text-truncate')
+    } else {
+      $(event.target).closest('.questionContainer').find('.questionText').addClass('text-truncate')
+    }
+  })
+</script>
+<!-- jQuery -->
