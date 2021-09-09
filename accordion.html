@@ -1,0 +1,42 @@
+<!-- HTML -->
+
+<!-- Expand/Collapse All & Add Question buttons -->
+<div class="d-flex">
+  <button id="js-openAll" class="btn">Expand All</button>
+  <button id="js-closeAll" class="btn">Collapse All</button>
+</div>
+<!-- * -->
+
+<div class="d-flex align-items-center py-10" id="itemOne">
+  <span id="itemOneHeading" class="mr-2">Item 1</span>
+  <button class="btn btn-open collapsed" data-toggle="collapse" data-target="#itemOneContent" aria-expanded="true" aria-controls="itemOneContent" aria-label="Open">
+    <span class="d-none d-lg-block">Open</span>
+    <span class="material-icons" aria-hidden="true">expand_more</span>
+  </button>
+</div>
+<div id="itemOneContent" class="collapse p-3 bg-light" aria-labelledby="itemOneHeading" data-parent="#itemOne">
+  Item 1 content
+</div>
+
+<div class="d-flex align-items-center py-10" id="itemTwo">
+  <span id="itemTwoHeading" class="mr-2">Item 2</span>
+  <button class="btn btn-open collapsed" data-toggle="collapse" data-target="#itemTwoContent" aria-expanded="true" aria-controls="itemTwoContent" aria-label="Open">
+    <span class="d-none d-lg-block">Open</span>
+    <span class="material-icons" aria-hidden="true">expand_more</span>
+  </button>
+</div>
+<div id="itemTwoContent" class="collapse p-3 bg-light" aria-labelledby="itemTwoHeading" data-parent="#itemTwo">
+  Item 2 content
+</div>
+
+<!-- jQuery -->
+<script>
+  // Code for the Expand / Collapse all buttons
+  $('#js-openAll').on('click', function () {
+    $('.collapse').collapse('show')
+  })
+  $('#js-closeAll').on('click', function () {
+    $('.collapse').collapse('hide')
+  })
+</script>
+<!-- jQuery -->
